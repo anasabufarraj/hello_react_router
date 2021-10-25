@@ -1,21 +1,23 @@
+import { Link } from 'react-router-dom';
+
 function NavBar() {
   return (
     <nav className="navbar navbar-expand navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           Home
-        </a>
+        </Link>
         <div className="navbar-collapse">
           <div className="navbar-nav">
-            <a className="nav-link" href="/products">
+            <Link className="nav-link" to="/products">
               Products
-            </a>
-            <a className="nav-link" href="/posts/2021/01">
+            </Link>
+            <Link className="nav-link" to="/posts/2021/01">
               Posts
-            </a>
-            <a className="nav-link" href="/admin">
+            </Link>
+            <Link className="nav-link" to="/admin">
               Admin
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
-import React from 'react';
+import { Component } from 'react';
 
-class ProductDetails extends React.Component {
+class ProductDetails extends Component {
   handleSave = () => {
     // Navigate to /products
   };
