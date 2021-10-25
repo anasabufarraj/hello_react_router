@@ -18,7 +18,7 @@ class App extends React.Component {
           <Switch>
             <Route path="/products/:id" component={ProductDetails} />
             <Route path="/products" render={(props) => <Products prop="hello" {...props} />} />
-            <Route path="/posts" component={Posts} />
+            <Route path="/posts/:year?/:month?" component={Posts} />
             <Route path="/admin" component={Dashboard} />
             <Route path="/" component={Home} />
           </Switch>
