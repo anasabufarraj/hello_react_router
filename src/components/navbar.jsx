@@ -12,7 +12,7 @@ function NavBar() {
             <Link className="nav-link" to="/products">
               Products
             </Link>
-            <Link className="nav-link" to="/posts/2021/January">
+            <Link className="nav-link" to="/posts">
               Posts
             </Link>
             <Link className="nav-link" to="/admin">

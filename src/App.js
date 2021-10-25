@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Products from './components/products';
 import ProductDetails from './components/productDetails';
 import Posts from './components/posts';
+import PostDetails from './components/postDetails';
 import Dashboard from './components/admin/dashboard';
 import Home from './components/home';
 import './App.css';
@@ -18,7 +19,8 @@ class App extends React.Component {
           <Switch>
             <Route path="/products/:id" component={ProductDetails} />
             <Route path="/products" render={(props) => <Products prop="hello" {...props} />} />
-            <Route path="/posts/:year?/:month?" component={Posts} />
+            <Route path="/posts/:year/:month" component={PostDetails} />
+            <Route path="/posts" component={Posts} />
             <Route path="/admin" component={Dashboard} />
             <Route path="/" component={Home} />
           </Switch>
