@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from './components/navbar';
 import { Route, Switch } from 'react-router-dom';
 import Products from './components/products';
+import ProductDetails from './components/productDetails';
 import Posts from './components/posts';
 import Dashboard from './components/admin/dashboard';
 import Home from './components/home';
@@ -15,10 +16,8 @@ class App extends React.Component {
         <hr />
         <div className="fw-light">
           <Switch>
-            <Route
-              path="/products"
-              render={(props) => <Products prop="hello" {...props} />}
-            />
+            <Route path="/products/:id" component={ProductDetails} />
+            <Route path="/products" render={(props) => <Products prop="hello" {...props} />} />
             <Route path="/posts" component={Posts} />
             <Route path="/admin" component={Dashboard} />
             <Route path="/" component={Home} />
