@@ -15,7 +15,10 @@ class App extends React.Component {
         <hr />
         <div className="fw-light">
           <Switch>
-            <Route path="/products" component={Products} />
+            <Route
+              path="/products"
+              render={(props) => <Products prop="hello" {...props} />}
+            />
             <Route path="/posts" component={Posts} />
             <Route path="/admin" component={Dashboard} />
             <Route path="/" component={Home} />
