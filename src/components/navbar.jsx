@@ -18,6 +18,9 @@ function NavBar() {
             <Link className="nav-link" to="/admin">
               Admin
             </Link>
+            <Link className="nav-link" to="/queries?sortBy=asc&approved=true">
+              Queries
+            </Link>
           </div>
         </div>
       </div>

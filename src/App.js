@@ -7,6 +7,7 @@ import Posts from './components/posts';
 import PostDetails from './components/postDetails';
 import Dashboard from './components/admin/dashboard';
 import Home from './components/home';
+import Queries from './components/queries';
 import './App.css';
 
 class App extends React.Component {
@@ -21,6 +22,7 @@ class App extends React.Component {
             <Route path="/products" component={Products} />} />
             <Route path="/posts/:year/:month" component={PostDetails} />
             <Route path="/posts" component={Posts} />
+            <Route path="/queries" component={Queries} />
             <Route path="/admin" component={Dashboard} />
             <Route path="/" component={Home} />
           </Switch>
