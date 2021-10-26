@@ -1,10 +1,14 @@
 import { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 class ProductDetails extends Component {
-  handleSave = () => {
-    // Navigate to /products
-  };
+  constructor(props) {
+    super(props);
+    this.handleSave = this.handleSave.bind(this);
+  }
+
+  handleSave() {
+    this.props.history.replace('/products');
+  }
 
   render() {
     return (
@@ -18,9 +22,9 @@ class ProductDetails extends Component {
         <button className="btn btn-primary" onClick={this.handleSave}>
           Save
         </button>
-        <Link className="btn btn-dark mx-2" to="/products">
+        <button className="btn btn-dark mx-2" onClick={this.props.history.goBack}>
           Back
-        </Link>
+        </button>
       </div>
     );
   }

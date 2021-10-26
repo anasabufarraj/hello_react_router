@@ -1,10 +1,14 @@
 import { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 class PostDetails extends Component {
-  handleSave = () => {
-    // Navigate to /Posts
-  };
+  constructor(props) {
+    super(props);
+    this.handleSave = this.handleSave.bind(this);
+  }
+
+  handleSave() {
+    this.props.history.replace('/posts');
+  }
 
   render() {
     return (
@@ -20,9 +24,9 @@ class PostDetails extends Component {
         <button className="btn btn-primary" onClick={this.handleSave}>
           Save
         </button>
-        <Link className="btn btn-dark mx-2" to="/posts">
+        <button className="btn btn-dark mx-2" onClick={this.props.history.goBack}>
           Back
-        </Link>
+        </button>
       </div>
     );
   }
