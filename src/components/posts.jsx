@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 class Posts extends React.Component {
   state = {
     posts: [
-      { year: 2021, month: 'June' },
-      { year: 2019, month: 'April' },
-      { year: 2018, month: 'June' },
+      { id: 1, year: 2021, month: 'June' },
+      { id: 2, year: 2019, month: 'April' },
+      { id: 3, year: 2018, month: 'June' },
     ],
   };
 
@@ -16,7 +16,7 @@ class Posts extends React.Component {
         <h1>Posts</h1>
         <ul>
           {this.state.posts.map((post) => (
-            <li>
+            <li key={post.id}>
               <Link to={`/posts/${post.month}/${post.year}`}>
                 {post.month}, {post.year}
               </Link>
