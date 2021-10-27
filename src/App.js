@@ -31,6 +31,7 @@ class App extends React.Component {
             <Redirect from="/messages" to="/posts" />
           </Switch>
         </div>
+        <small className="fixed-bottom text-secondary m-3">Version 0.0.8</small>
       </React.Fragment>
     );
   }

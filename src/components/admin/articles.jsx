@@ -1,9 +1,9 @@
 import React from 'react';
 
-function AdminUsers() {
+function AdminArticles() {
   return (
     <React.Fragment>
-      <h2>Users</h2>
+      <h2>Articles</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium adipisci
         aliquam amet aut autem culpa eveniet harum, hic incidunt laudantium molestias nam
@@ -13,4 +13,4 @@ function AdminUsers() {
   );
 }
 
-export default AdminUsers;
+export default AdminArticles;
