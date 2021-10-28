@@ -26,8 +26,8 @@ class App extends React.Component {
             <Route path="/queries" component={Queries} />
             <Route path="/admin" component={Dashboard} />
             <Route exact path="/" component={Home} />
-            <Redirect to="/not-found" />
             <Route path="/not-found" component={NotFound} />
+            <Redirect to="/not-found" />
             <Redirect from="/messages" to="/posts" />
           </Switch>
         </div>
